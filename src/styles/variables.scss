@@ -1,0 +1,34 @@
+// 定义常量
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #ffffff;
+$subMenuActiveText: #f4f4f5;
+
+$menuBg: #304156;
+$menuHover: #263445;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+
+$sideBarWidth: 210px;
+$hideSideBarWidth: 54px;
+$sideBarDuration: 0.28s;
+
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+// JS 与 scss 共享变量，在 scss 中通过 :export 进行导出，在 js 中可通过 ESM 进行导入
+
+// 最新的vue-cli5.0里面的vue-loader从v14之后就已经不再默认开启cssModules了，问题就在这里了新版本根本就没有默认开启cssModule，所以最终导出的东西是个空值
+// "sass": "^1.26.5",
+// "sass-loader": "^8.0.2"
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  hideSideBarWidth: $hideSideBarWidth;
+  sideBarDuration: $sideBarDuration;
+}
